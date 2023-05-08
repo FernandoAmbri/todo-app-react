@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background: #a3e635;
+}
+
+.menu-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.menu>li {
+  display: block;
+  padding: 0.8em 0.3em;
+}
+
+.btn-nav-icon {
+  background-color: transparent;
+  padding: 0.2em;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn-nav-icon:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+.search-container {
+  display: flex;
+  width: 250px;
+  background-color: white;
+  padding: 0.4em 0.5em;
+  border-radius: 0.5em;
+  align-items: center;
+  gap: .5em;
+}
+
+.search-todo {
+  width: 150px;
+  border: none;
+  outline: none;
+  padding: 0.2em;
+  margin-right: 0.5em;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-search {
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 560px) {
+  .search-container {
+    width: 440px;
+  }
+
+  .search-todo {
+    width: 340px;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+  background-color: #f7fee7;
+}
+
+.sidebar>.sections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.sections>.section {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  border-radius: 0.4em;
+}
+
+.sections .section:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: green;
+  border-radius: 0.3em;
+}
+
+.sidebar>.projects {
+  width: 100%;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar>.projects>div {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.sidebar-icon {
+  border: none;
+  font-size: 1em;
+  background-color: transparent;
+}
+
+.container-projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-projects>.project-row {
+  display: flex;
+  width: 250px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8em;
+  padding: 0.3em;
+}
+
+.project-row>div {
+  padding: 0.3em;
+  overflow: hidden;
+  text-align: center;
+}
+
+#name-project {
+  margin-left: 1em;
+}
+
+.btn-delete-project {
+  font-size: 1.1em;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.content {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4em;
+}
+
+.content h1 {
+  text-align: center;
+}
+
+button.add-task {
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+button.add-task:hover {
+  color: #84cc16;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 0.8em;
+  border: 1px solid #a3a3a3;
+  border-radius: 0.4em;
+  margin-bottom: 1.1em;
+  gap: 0.8em;
+}
+
+.task input[type=checkbox] {
+  width: 1.2em;
+  accent-color: white;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.task div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.task>button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+form .task-card {
+  border: 1px solid #a3a3a3;
+  border-radius: 0.8em;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em;
+}
+
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+.task-card input[type=text] {
+  padding: 0.3em 0;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+
+textarea {
+  resize: none;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 0.3em 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.selectors {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type=date] {
+  padding: 0.1em;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=date]:hover {
+  background: #eee;
+  border: 1px solid #333;
+}
+
+select {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.2em;
+  outline: none;
+}
+
+select:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.buttons-card {
+  display: flex;
+  justify-content: end;
+  gap: 0.5em;
+  margin: 0.8em 0;
+}
+
+.buttons-card button {
+  padding: 0.3em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  width: 80px;
+}
+
+button.btn-cancel,
+button.btn-cancel-project {
+  background: #f7fee7;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+button.btn-add,
+button.btn-save {
+  background: #a3e635;
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #a3e635;
+}
+
+.form-add-project {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #a3a3a3;
+  border-radius: 0.8em;
+  padding: 0.8em;
+  margin-top: 1.2em;
+  gap: 0.4em;
+}
+
+.form-add-project input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.4em;
+}
+
+@media screen and (min-width: 560px) {
+  .content {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
